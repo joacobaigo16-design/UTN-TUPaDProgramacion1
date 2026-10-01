@@ -1,0 +1,6 @@
+def saludar_usuario(nombre):
+    return "Hola " + nombre + "!"
+
+nombre = input("Ingrese su nombre: ")
+saludo = saludar_usuario(nombre)
+print(saludo)
