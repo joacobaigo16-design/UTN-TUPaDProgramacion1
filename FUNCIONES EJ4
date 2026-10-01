@@ -1,0 +1,14 @@
+def calcular_area_circulo(radio):
+    return 3.14 * (radio ** 2)
+
+def calcular_perimetro_circulo(radio):
+    return (radio + radio) * 3.14
+
+
+radio = int(input("Ingrese el radio de un circulo: "))
+perimetro = calcular_perimetro_circulo(radio)
+area = calcular_area_circulo(radio)
+
+
+print(f"El perimetro del circulo es: {perimetro}")
+print(f"El area del circulo es: {area}")
