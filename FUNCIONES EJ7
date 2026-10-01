@@ -1,0 +1,32 @@
+def operaciones_basicas(a, b):
+    suma = a + b
+    resta = a - b
+    multiplicacion = a * b
+    division = a / b
+
+    print(f"El resultado de la suma es: {suma} \n El resultado de la resta es: {resta} \n El resultado de la multiplicacion es: {multiplicacion} \n El resultado de la division es: {division} ")
+
+a = 10
+b = 5
+
+operaciones_basicas(a, b)
+
+-------------------------------------------------------------------
+          OPCION B "TUPLA"
+
+def operaciones_basicas(a, b):
+    suma = a + b
+    resta = a - b
+    multiplicacion = a * b
+    division = a / b
+
+    return (suma, resta, multiplicacion, division)
+
+a = 10
+b = 5
+
+resultados = operaciones_basicas(a, b)
+print(f"El resultado de la suma es: {resultados[0]}")
+print(f"El resultado de la resta es: {resultados[1]}")
+print(f"El resultado de la multiplicacion es: {resultados[2]}")
+print(f"El resultado de la division es: {resultados[3]}")
