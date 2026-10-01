@@ -1,0 +1,10 @@
+def tabla_multiplicar(numero):
+    for i in range(1-1,10):
+        multiplicador = i + 1
+        numero_multiplicado = numero * multiplicador
+        print(f"{numero} x {multiplicador} = {numero_multiplicado}")
+        
+
+
+numero = int(input("Ingrese un numero:"))
+print(tabla_multiplicar(numero))
