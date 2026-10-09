@@ -1,0 +1,191 @@
+#----- Ejercicio 1 -----#
+
+precio_frutas = {"Banana": 1200
+                 , "Ananá": 2500
+                 , "Melón": 3000
+                 , "Uva": 1450}
+
+precio_frutas["Naranja"] = 1200
+precio_frutas["Manzana"] = 1500
+precio_frutas["Pera"] = 2300
+
+print(precio_frutas)
+
+#----- Ejercicio 2 -----#
+
+precio_frutas = {"Banana": 1200, 
+                 "Ananá": 2500, 
+                 "Melón": 3000, 
+                 "Uva": 1450, 
+                 "Pera": 2300, 
+                 "Naranja": 1200 }
+
+precio_frutas["Banana"] = 1330
+precio_frutas["Manzana"] =1700
+precio_frutas["Melón"] = 2000
+
+print(precio_frutas)
+
+#----- Ejercicio 3 -----#
+
+precio_frutas = {"Banana": 1200, 
+                 "Ananá": 2500, 
+                 "Melón": 3000, 
+                 "Uva": 1450, 
+                 "Pera": 2300, 
+                 "Naranja": 1200 }
+
+lista_frutas = [fruta for fruta in precio_frutas.keys()]
+
+print(lista_frutas)
+
+#----- Ejercicio 4 -----#
+
+#crear un diccionario vacio para almacenar los contactos
+contactos = {}
+
+print("--- Carga de contactos ---")
+#permitir al usuario cargar 5 contactos
+for i in range(5):
+    nombre = input(f"Ingrese el nombre del contacto {i + 1}: ")
+    numero = input(f"Ingrese el número telefónico de {nombre}: ")
+    
+    #guardar usando el nombre como clave y el numero como valor
+    contactos[nombre] = numero
+
+print("\n--- Consulta de contactos ---")
+#pedir un nombre y mostrar el numero si existe
+nombre_a_buscar = input("Ingrese el nombre del contacto que desea consultar: ")
+
+if nombre_a_buscar in contactos:
+    print(f"El número telefónico de {nombre_a_buscar} es: {contactos[nombre_a_buscar]}")
+else:
+    print("El contacto no existe en la agenda.")
+
+#----- Ejercicio 5 -----#
+
+frase = input("Ingrese una frase: ")
+
+palabras = frase.lower().split()
+
+palabras_unicas = set(palabras)
+
+conteo_palabras = {}
+for palabra in palabras:
+    conteo_palabras[palabra] = conteo_palabras.get(palabra, 0) + 1
+
+print("\n--- Resultados ---")
+print("Palabras únicas (set):")
+print(palabras_unicas)
+
+print("\nFrecuencia de cada palabra (diccionario):")
+print(conteo_palabras)
+
+
+#----- Ejercicio 6 -----#
+
+alumnos = {}
+
+print("--- Registro de Alumnos y Notas ---")
+for i in range(3):
+    nombre = input(f"\nIngrese el nombre del alumno {i + 1}: ")
+    
+    nota1 = float(input(f"Ingrese la nota 1 de {nombre}: "))
+    nota2 = float(input(f"Ingrese la nota 2 de {nombre}: "))
+    nota3 = float(input(f"Ingrese la nota 3 de {nombre}: "))
+    
+    alumnos[nombre] = (nota1, nota2, nota3)
+
+print("\n--- Promedios Finales ---")
+for nombre, notas in alumnos.items():
+    promedio = sum(notas) / len(notas)
+    
+    print(f"Alumno: {nombre}")
+    print(f"Notas: {notas}")
+    print(f"Promedio: {promedio:.2f}\n")
+
+
+#----- Ejercicio 7 -----#
+
+asistencias = ["Ana", "Luis", "Ana", "María", "Luis", "Pedro", "Ana"]
+
+print("Lista original de asistencias:")
+print(asistencias)
+
+empleados = set(asistencias)
+print("\nEmpleados que asistieron (sin repetir nombres):")
+print(empleados)
+
+print("\nCantidad de asistencias por empleado:")
+for empleado in empleados:
+    cantidad = asistencias.count(empleado)
+    print(f"{empleado}: {cantidad} vez/veces")
+
+#----- Ejercicio 8 -----#
+
+productos = {
+    "Arroz": 10,
+    "Fideos": 15,
+    "Leche": 8,
+    "Azúcar": 12
+}
+
+print("Stock actual:", productos)
+
+producto = input("Ingresá el nombre del producto: ")
+
+if producto in productos:
+    print("Stock actual de", producto, ":", productos[producto])
+
+    unidades = int(input("¿Cuántas unidades querés agregar? "))
+
+    productos[producto] += unidades
+    print("Stock actualizado:", productos[producto])
+
+else:
+    print("El producto no existe.")
+    unidades = int(input("Ingresá la cantidad de unidades para el nuevo producto: "))
+
+    productos[producto] = unidades
+    print("Producto agregado correctamente.")
+
+print("Stock final:", productos)
+
+
+#----- Ejercicio 9 -----#
+
+agenda = {
+    ("lunes", "10:00"): "Reunión",
+    ("martes", "15:00"): "Clase de inglés",
+    ("miércoles", "09:00"): "Médico",
+    ("viernes", "18:00"): "Gimnasio"
+}
+
+print("Agenda completa:")
+print(agenda)
+
+dia = input("Ingresá el día: ").lower()
+hora = input("Ingresá la hora (HH:MM): ")
+
+clave = (dia, hora)
+
+if clave in agenda:
+    print("La actividad programada es:", agenda[clave])
+else:
+    print("No hay actividades programadas para ese día y hora.")
+
+
+#----- Ejercicio 10 -----#
+
+paises= {
+    "Argentina": "Buenos Aires",
+    "Chile": "Santiago"}
+invertido = {}
+
+for pais, capital in paises.items():
+    invertido [capital] = pais
+
+print(invertido)
+
+
+
